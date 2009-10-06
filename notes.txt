@@ -1,0 +1,10 @@
+Web Service:
+  http://www.freshbooks.com/recent-events
+
+Problem:
+  XMLHttpRequest cannot make cross-domain requests without altering endpoint (not possible for hackoff).
+
+Ideas:
+  Write a quick python app that calls the web service every 5 seconds and dumps the data into an SQLite
+  database. Create a local web service that reads and deletes records from the database. Call the local
+  web service from the JS XHR. 

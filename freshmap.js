@@ -47,8 +47,9 @@ FreshMap.prototype.loop = function() {
         title: 'Marker! Woo!'
     });
     this.infoWindow = new google.maps.InfoWindow({
-       content: '<div class="infoWindow">Someone in Western ' +
-        'Australia, Australia tracked their time.</div>' 
+       content: '<div class="eventInfo"><p>Someone in Western ' +
+        'Australia, Australia tracked their time.</p></div>',
+       maxWidth: 300
     });
     this.infoWindow.open(this.map, this.marker);
     this.map.panTo(location);
