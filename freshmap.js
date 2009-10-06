@@ -4,10 +4,11 @@
 function FreshMap(mapelement) {
     var element = document.getElementById(mapelement);
     this.map = new google.maps.Map(element, {
-        zoom : 4,
-        center : this.getLocation(),
+        zoom: 4,
+        center: this.getLocation(),
         mapTypeId: google.maps.MapTypeId.TERRAIN,
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        scrollwheel: false
     });
     this.marker = null;
     this.infoWindow = null;
