@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         'paste.app_factory' : [
-            'recentevents=reventevents.app:EventsFeed'
+            'recentevents=recentevents.app:EventsFeed'
         ]
     }
 )

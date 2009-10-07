@@ -3,7 +3,7 @@ from redfox import WebApplication, get, post
 from urllib import urlopen
 
 class EventsFeed(WebApplication):
-    def __init__(self, global_config=None, feedurl, **local_config):
+    def __init__(self, global_config, feedurl, **local_config):
         self.feedurl = feedurl
     
     @get('/')
