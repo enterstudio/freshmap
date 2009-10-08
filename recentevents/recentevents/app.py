@@ -8,6 +8,10 @@ class EventsFeed(WebApplication):
     
     @get('/')
     def index(self, request):
+        return Response('Nothing here')
+    
+    @get('/recent-events')
+    def events(self, request):
         feed = urlopen(self.feedurl)
         response = Response(feed.read())
         response.headers['Content-type'] = 'application/json'
