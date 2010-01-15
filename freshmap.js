@@ -48,7 +48,7 @@ function FreshMap(mapelement) {
 FreshMap.prototype.getLocationFromDescription = function(description) {
     var start = "someone in ".length; 
     var tokens = [
-        'tracked', 'sent a', 'created a', 'logged', 'got'
+        'tracked', 'sent a', 'created a', 'logged', 'got', 'mailed a'
     ];
     for (var i = 0; i < tokens.length; i++) {
         var tokenIndex = description.indexOf(tokens[i]);
@@ -56,9 +56,7 @@ FreshMap.prototype.getLocationFromDescription = function(description) {
             return description.substring(start, tokenIndex);
         }
     }
-    /* unknown event description, log it. */
-    console.log("WARN: Unknown event: " + description);
-    return null;
+    return '';
 };
 
 // Given an event object, build a string representation in the form 
